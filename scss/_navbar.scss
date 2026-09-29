@@ -1,0 +1,39 @@
+@use "variables" as v;
+
+
+.navbar {
+    background-color: v.$color-principal;
+    padding: 15px 0;
+
+    .navbar-brand {
+        color: v.$color-blanco;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+
+        &:hover {
+            color: v.$color-acento;
+        }
+    }
+
+
+    .nav-link {
+        color: v.$color-blanco;
+        margin-left: 15px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: v.$color-acento;
+        }
+    }
+
+
+    .navbar-toggler {
+        border-color: v.$color-blanco;
+    }
+
+
+    .navbar-toggler-icon {
+        filter: brightness(0) invert(1);
+    }
+}

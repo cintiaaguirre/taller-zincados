@@ -1,0 +1,149 @@
+@use "variables" as v;
+
+
+@media (max-width: 991px) {
+
+    .navbar {
+
+        .nav-link {
+            margin-left: 0;
+            padding: 10px 0;
+        }
+
+    }
+
+
+    main {
+
+        section {
+
+            &:first-child {
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    section {
+        padding: 50px 20px;
+    }
+
+
+    main {
+
+        section {
+
+            &:first-child {
+
+                h1 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+
+            }
+
+        }
+
+    }
+
+
+    .navbar {
+
+        .navbar-brand {
+            font-size: 1.3rem;
+        }
+
+    }
+
+
+    footer {
+
+        text-align: center;
+
+        .container {
+            width: 90%;
+        }
+
+    }
+
+
+    form {
+        padding: v.$espaciado-medio !important;
+    }
+
+
+    h1 {
+        font-size: 2rem;
+    }
+
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    section {
+        padding: 40px 15px;
+    }
+
+
+    main {
+
+        section {
+
+            &:first-child {
+
+                h1 {
+                    font-size: 1.8rem;
+                }
+
+            }
+
+        }
+
+    }
+
+
+    .navbar {
+
+        .container {
+            width: 92%;
+        }
+
+    }
+
+
+    main {
+
+        section {
+
+            &:nth-child(2) {
+
+                article {
+                    padding: v.$espaciado-medio;
+                }
+
+            }
+
+        }
+
+    }
+
+}

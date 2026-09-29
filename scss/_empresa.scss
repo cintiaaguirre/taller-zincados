@@ -1,0 +1,91 @@
+@use "variables" as v;
+
+
+.empresa {
+
+    section {
+
+        &:first-child {
+            text-align: center;
+            padding: 70px 5%;
+            background-color: v.$color-principal;
+            color: v.$color-blanco;
+
+            h1 {
+                color: v.$color-blanco;
+                font-size: 2.8rem;
+            }
+
+            p {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        }
+
+
+        &:nth-child(2) {
+
+            h2 {
+                text-align: center;
+            }
+
+            article {
+                background-color: v.$color-blanco;
+                padding: v.$espaciado-grande;
+                margin-bottom: v.$espaciado-medio;
+                border-radius: v.$radio;
+                box-shadow: v.$sombra;
+
+                h3 {
+                    color: v.$color-acento;
+                }
+            }
+        }
+
+
+        &:nth-child(3) {
+
+            background-color: v.$color-blanco;
+
+            h2 {
+                text-align: center;
+            }
+
+            article {
+                padding: v.$espaciado-medio;
+                margin-bottom: v.$espaciado-medio;
+                border-left: 4px solid v.$color-acento;
+
+                h3 {
+                    color: v.$color-principal;
+                }
+            }
+        }
+
+
+        &:nth-child(4) {
+            text-align: center;
+
+            p {
+                max-width: 700px;
+                margin: 0 auto v.$espaciado-medio;
+            }
+
+            a {
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: v.$color-acento;
+                color: v.$color-blanco;
+                text-decoration: none;
+                border-radius: v.$radio;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-3px);
+                }
+            }
+        }
+
+    }
+
+}

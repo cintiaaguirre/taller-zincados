@@ -1,0 +1,95 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+
+.home {
+
+    section {
+
+        &:first-child {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 80px 5%;
+            background: linear-gradient(
+                135deg,
+                v.$color-principal,
+                v.$color-secundario
+            );
+            color: v.$color-blanco;
+
+            h1 {
+                max-width: 800px;
+                font-size: 3rem;
+                color: v.$color-blanco;
+            }
+
+            p {
+                max-width: 700px;
+                font-size: 1.2rem;
+            }
+
+            a {
+                @include m.boton(v.$color-acento);
+            }
+        }
+
+
+        &:nth-child(2) {
+
+            h2 {
+                text-align: center;
+            }
+
+            article {
+                padding: v.$espaciado-medio;
+                margin-bottom: v.$espaciado-medio;
+                background-color: v.$color-blanco;
+                border-radius: v.$radio;
+                box-shadow: v.$sombra;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+                h3 {
+                    color: v.$color-acento;
+                }
+            }
+        }
+
+
+        &:nth-child(3) {
+
+            background-color: v.$color-blanco;
+
+            h2 {
+                text-align: center;
+            }
+
+            article {
+                padding: v.$espaciado-medio;
+                margin-bottom: v.$espaciado-medio;
+                border-left: 4px solid v.$color-acento;
+
+                h3 {
+                    color: v.$color-principal;
+                }
+            }
+        }
+
+
+        &:nth-child(4) {
+            text-align: center;
+
+            a {
+                @include m.boton(v.$color-principal);
+            }
+        }
+
+    }
+
+}

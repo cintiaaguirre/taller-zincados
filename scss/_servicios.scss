@@ -1,0 +1,79 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+
+.servicios {
+
+    section {
+
+        &:first-child {
+            text-align: center;
+            background-color: v.$color-principal;
+            color: v.$color-blanco;
+            padding: 70px 5%;
+
+            h1 {
+                color: v.$color-blanco;
+                font-size: 2.8rem;
+            }
+
+            p {
+                max-width: 750px;
+                margin: 0 auto;
+            }
+        }
+
+
+        &:nth-child(2) {
+
+            h2 {
+                text-align: center;
+            }
+
+            article {
+                background-color: v.$color-blanco;
+                padding: v.$espaciado-grande;
+                margin-bottom: v.$espaciado-medio;
+                border-radius: v.$radio;
+                box-shadow: v.$sombra;
+                border-top: 4px solid v.$color-acento;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+                h3 {
+                    color: v.$color-acento;
+                }
+            }
+        }
+
+
+        &:nth-child(3) {
+
+            background-color: v.$color-blanco;
+
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+
+
+        &:nth-child(4) {
+            text-align: center;
+
+            a {
+                @include m.boton(v.$color-acento);
+            }
+        }
+
+    }
+
+}

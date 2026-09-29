@@ -1,0 +1,124 @@
+@use "variables" as v;
+@use "mixins" as m;
+%campo-formulario {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: v.$radio;
+    font-size: 1rem;
+}
+
+.contacto {
+
+    section {
+
+        &:first-child {
+            text-align: center;
+            background-color: v.$color-principal;
+            color: v.$color-blanco;
+            padding: 70px 5%;
+
+            h1 {
+                color: v.$color-blanco;
+                font-size: 2.8rem;
+            }
+
+            p {
+                max-width: 750px;
+                margin: 0 auto;
+            }
+        }
+
+
+        &:nth-child(2) {
+
+            h2 {
+                text-align: center;
+                margin-bottom: v.$espaciado-grande;
+            }
+
+            form {
+                width: 90%;
+                max-width: 700px;
+                margin: 0 auto;
+                padding: v.$espaciado-grande;
+                background-color: v.$color-blanco;
+                border-radius: v.$radio;
+                box-shadow: v.$sombra;
+
+
+                div {
+                    margin-bottom: v.$espaciado-medio;
+                }
+
+
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                    color: v.$color-principal;
+                }
+
+
+               input,
+               select,
+               textarea {
+                @extend %campo-formulario;
+                transition: border-color 0.3s ease;
+
+                    &:focus {
+                        outline: none;
+                        border-color: v.$color-acento;
+                    }
+                }
+
+
+                textarea {
+                    resize: vertical;
+                }
+
+
+                button {
+                    width: 100%;
+                    padding: 12px;
+                    border: none;
+                    border-radius: v.$radio;
+                    background-color: v.$color-acento;
+                    color: v.$color-blanco;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    transition: transform 0.3s ease, opacity 0.3s ease;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                        opacity: 0.9;
+                    }
+                }
+
+            }
+
+        }
+
+
+        &:nth-child(3) {
+
+            background-color: v.$color-blanco;
+
+            h2 {
+                text-align: center;
+            }
+
+            article {
+                padding: v.$espaciado-medio;
+                margin-bottom: v.$espaciado-medio;
+                border-left: 4px solid v.$color-acento;
+
+                h3 {
+                    color: v.$color-principal;
+                }
+            }
+        }
+
+    }
+
+}
